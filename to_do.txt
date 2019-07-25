@@ -1,0 +1,16 @@
+
+to do-->>
+
+Work on datetime module
+work on useful functions lke strip,sliding,dicts,lists,sets and so on.
+program for parsing avro and json file.
+program to validate schema for json file and collect the rejected records
+program to create and run one spark code with spark session.
+one program with use of handler in lambda function in aws.
+learm about big data EMR clusters in aws and its use using python.
+one program to load data using aws glue.
+polling of messages from SNS and SQS using python.
+write one IAM policy by yourself to give permission on S3 bucket to EC instance.
+explore pyspark as much as you can.
+learn about job creation and scheduling in aws environment.
+write a program to captur rejected record from json data file.
