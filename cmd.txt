@@ -1,0 +1,176 @@
+handling files:--
+
+f = open('text.txt','r+w')
+
+print(f.name)
+f.close()
+
+------------
+
+with open('text.txt','r+w') as f:
+f = open('text.txt','r+w')
+print(f.name)
+f_contemts = f.read()
+f_contemts = f.read(100)-- prints 100 chars and sets the pointer to 101th place.
+f_contemts = f.readlines()
+f_contemts = f.readline()
+f.tell()--> to sho the current position of the read pointer
+f.seek(0)-->resets the read pointer to start or any location you mention
+f.write('ssss')
+--------
+
+with open('text.txt','r+w') as f:
+	for line in f:
+
+
+
+
+----------OS MODULE---------
+
+
+print(line, end='')
+os.path.isdir
+os.path.splitext('a.txt')
+
+os.chdir()
+os.lstdir()
+os.path.splitext(f)
+
+renaming the files:-->.
+
+os.chdir('/files path')
+
+for f in os.listdir():
+    f_name,f_ext = os.path.splitext(f)
+    f_title,f_course,f_num = f_name.split('-')
+    f_title = f.title.strip()
+    f_course = f.course.strip()
+    f_num = f_num.strip()[1:].zfill(2)
+    new_name='{}-{}{}'.format(f_num,f_title,f_ext)
+    os.rename(f,new_name)
+  
+---------------->>>>
+import sys
+sys.path
+sys.path.append('user/santosh/desktop/python')
+import datetime
+import calender
+
+see PYTHONPATH
+
+-------------dictionaries------
+student = {'name': 'santosh'}
+stdent.update({'name':'sumit'})
+
+del student['name']
+
+student['age']= '30'
+
+age = student.pop('age')
+print(age)
+
+print(len(student)
+student.keys()
+student.values()
+student.items()
+
+for key, value in student.items():
+	print(key,value)
+
+
+----------Condition-----------
+
+if condition:
+statement
+elif condition:
+statement
+else:
+statement
+
+
+
+---------------
+
+nums = [1,2,3,4,5,6,7]
+
+list_compri = [n for n in nums]
+
+print(list_compri)
+
+nums_new=[]
+for i in nums:
+  if i%2 == 0:
+	nums_new.append(i)
+print(nums_new)
+
+or
+
+nums_new = filter( lambda n: n%2 == 0, nums )
+print(nums_new)
+
+or
+
+nums_new =  [n for n in nums if n%2 == 0 ]
+print(nums_new)
+
+nums_new = [(letter,num) for letter in 'abcd' for num in range(4) ]
+print(nums_new)
+
+names = [a,s,d,f,g]
+heros = [q,w,e,r,t]
+my_dict ={}
+for names,heros in zip(names,heros)
+	my_dict[name] = heros
+prnt(my_dict)
+
+or
+
+my_dict = {name:hero for names,hero in zip(names,heros) if name !='a'}
+print(my_dict)
+
+
+
+generators:-->>
+
+my_gen = (n*n for n in nums)
+
+for i in my_gen:
+	print(i)
+
+string formatting-->>
+
+person = {'name':'santosh','age':'31'}
+l =['santosh','31']
+
+sentence = 'my name is {0['name']} and my age is {1['age']}'.format(person,person)
+
+sentence = 'my name is {0['name']} and my age is {0['age']}'.format(person)
+
+print(sentence)
+
+sentence = 'my name is {0[0]} and my age is {1[1]}'.format(l,l)
+sentence = 'my name is {0[0]} and my age is {0[1]}'.format(l)
+
+print(sentence)
+
+padding-->.
+
+for i in range(1,11):
+  sentence = 'The value is {:02}'.format(i)  zero padding till 2 digits
+  print(sentence)
+
+for decimal try{:.2f}
+commma sepe till 2 decimal  {:,.2f}
+
+date formatting::-->>
+
+import datetime
+my_date = datetime.datetime(2016,9,24,12,30,45)
+
+sentence = '{:%B %d,%y}'.format(my_date)
+
+
+
+
+
+
